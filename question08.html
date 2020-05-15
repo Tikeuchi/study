@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>question08</title>
+  </head>
+  <body>
+    <h3>■Q 08:</h3>
+    buttonをクリックした時、既存のdiv要素の中に<br>
+    新たなdiv要素とテキストを設定して生成するJavaScriptを記述して下さい。<br><br>
+    <div id="hoge"></div>
+    <input type="button" id="btn"  value="button">
+  </body>
+</html>
+
+<!-- ここからJavaScriptを記述して下さい -->
+<script type="text/javascript">
+  var btn = document.getElementById('btn');
+  btn.addEventListener('click', function() {
+    var hoge =document.getElementById('hoge');
+    var newDiv = document.createElement("div");
+    newDiv.textContent = 'hoge';
+    hoge.appendChild(newDiv);
+  });
+</script>

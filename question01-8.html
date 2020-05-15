@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>question01-8</title>
+  </head>
+  <body>
+    <h3>■要素.children：</h3>
+    buttonをクリックした時、「List2-2」に該当する要素だけをconsoleに出力して下さい。<br>
+    <div>
+      <ul id="parent">
+        <li>List1</li>
+        <li>List2</li>
+          <ul>
+            <li>List2-1</li>
+            <li>List2-2</li>
+          </ul>
+        <li>List3</li>
+      </ul>
+      <input type="button" id="btn"  value="button">
+    </div>
+  </body>
+</html>
+
+<!-- ここからJavaScriptを記述して下さい -->
+<script type="text/javascript">
+  var btn = document.getElementById('btn');
+  btn.addEventListener('click', function() {
+    var list = document.getElementById('parent');
+    console.log(list.children[2].children[1]);
+  });
+</script>

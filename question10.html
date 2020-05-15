@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>question10</title>
+  </head>
+  <body>
+    <h3>■Q 10:</h3>
+    buttonをクリックした時、1秒後に「Complete!!」をconsoleに表示するJavaScriptを記述して下さい。<br>
+    また、表示されるまでの間は「Wait...」をconsoleに表示するようにして下さい。<br><br>
+    <div>
+      <input type="button" id="btn"  value="button">
+    </div>
+  </body>
+</html>
+
+<!-- ここからJavaScriptを記述して下さい -->
+<script type="text/javascript">
+  var btn = document.getElementById('btn');
+  btn.addEventListener('click', function() {
+    var result = document.getElementById('result');
+    console.log('Wait...');
+    setTimeout(function() {
+      console.log('Complete!!');
+    }, 1000);
+  });
+</script>

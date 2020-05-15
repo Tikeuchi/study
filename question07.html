@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>question07</title>
+  </head>
+  <body>
+    <h3>■Q 07:</h3>
+    button01をクリックした時、このページに "a=A&b=B&c=C" という<br>
+    パラメータを渡して画面遷移するJavaScriptを記述して下さい。<br>
+    また、button02をクリックした時、URLのパラメータ "b" の内容を<br>
+    consoleに表示するJavaScriptのメソッドを作成し実行して下さい。<br><br>
+    <input type="button" id="btn01"  value="button">
+    <input type="button" id="btn02"  value="button">
+  </body>
+</html>
+
+<!-- ここからJavaScriptを記述して下さい -->
+<script src="method.js"></script>
+<script type="text/javascript">
+  var btn01 = document.getElementById('btn01');
+  var btn02 = document.getElementById('btn02');
+  btn01.addEventListener('click', function() {
+    location.href = 'http://localhost/linkdir/js_test/question07.html?a=A&b=B&c=C';
+  });
+  btn02.addEventListener('click', function() {
+    getHrefParam('b');
+  });
+</script>

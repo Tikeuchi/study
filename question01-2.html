@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>question01-2</title>
+  </head>
+  <body>
+    <h3>■要素.id：</h3>
+    buttonをクリックした時、spanタグのid要素のみ取得してconsoleへ表示して下さい。<br><br>
+    <div>
+      <span id="span">abc0123</span>
+      <input type="button" id="btn"  value="button">
+    </div>
+  </body>
+</html>
+
+<!-- ここからJavaScriptを記述して下さい -->
+<script type="text/javascript">
+  var btn = document.getElementById('btn');
+  btn.addEventListener('click', function() {
+    var span = document.getElementById('span');
+    console.log(span.id);
+  });
+</script>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>question04</title>
+  </head>
+  <body>
+    <h3>■Q 04:</h3>
+    以下のbuttonを押した時、"select02" が選択される<br>
+    JavaScriptのメソッドを作成して下さい。<br>
+    また、そのメソッドを呼び出して実行して下さい。<br><br>
+    <div>
+      <select name="name">
+        <option value="select01">select01</option>
+        <option value="select02">select02</option>
+        <option value="select03">select03</option>
+      </select>
+      <input type="button" id="btn"  value="button">
+    </div>
+  </body>
+</html>
+
+<!-- ここからJavaScriptを記述して下さい -->
+<script src="method.js"></script>
+<script type="text/javascript">
+  var btn = document.getElementById('btn');
+  btn.addEventListener('click', function() {
+    setSelectValue('name', 'select02');
+  });
+</script>

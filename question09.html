@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>question09</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  </head>
+  <body>
+    ■Q09:<br>
+    question09.phpにAjaxに応答する記述があります<br>
+    buttonをクリックした時、テキストボックスの内容を送り、<br>
+    その結果を返すJavaScriptを記述して下さい。<br>
+    また、結果は "result" に表示して下さい。<br><br>
+    <div>
+      <label><input id="text" type="text" name="name"></label>
+      <input type="button" id="btn"  value="button">
+    </div>
+    <div id="result">【ここに結果を表示する】</div>
+
+    <!-- ここからJavaScriptを記述して下さい -->
+    <script type="text/javascript">
+      $(function() {
+        $("#btn").click(function() {
+          $.ajax({
+            url: "question09.php",
+            type: "GET",
+            data: $("#text"),
+            dataType: "text"
+          }).done(function(data) {
+            $("#result").text(data);
+          }).fail(function(data) {
+            $("#result").text("失敗");
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

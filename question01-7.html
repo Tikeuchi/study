@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>question01-7</title>
+  </head>
+  <body>
+    <h3>■要素.classList：</h3>
+    buttonをクリックした時、pタグのclassを全てconsoleに出力して下さい。<br>
+    <div>
+      <p id="js" class="aaa bbb ccc">JavaScript</p>
+      <input type="button" id="btn"  value="button">
+    </div>
+  </body>
+</html>
+
+<!-- ここからJavaScriptを記述して下さい -->
+<script type="text/javascript">
+  var btn = document.getElementById('btn');
+  btn.addEventListener('click', function() {
+    var js = document.getElementById('js');
+    console.log(js.classList);
+  });
+</script>

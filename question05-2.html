@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>question05-2</title>
+  </head>
+  <body>
+    <h3>■Q 05-2:</h3>
+    以下のbuttonを押した時、"radio03" が選択される<br>
+    JavaScriptのメソッドを作成し実行して下さい。<br><br>
+    <div>
+      <label>radio01<input type="radio" name="name" value="radio01"></label>
+      <label>radio02<input type="radio" name="name" value="radio02"></label>
+      <label>radio03<input type="radio" name="name" value="radio03"></label>
+      <input type="button" id="btn"  value="button">
+    </div>
+  </body>
+</html>
+
+<!-- ここからJavaScriptを記述して下さい -->
+<script src="method.js"></script>
+<script type="text/javascript">
+  var btn = document.getElementById('btn');
+  btn.addEventListener('click', function() {
+    setRadioValue('name', 'radio03');
+  });
+</script>

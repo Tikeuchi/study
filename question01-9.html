@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>question01-9</title>
+  </head>
+  <body>
+    <h3>■要素.style：</h3>
+    buttonをクリックした時、List1の文字色を赤に変更するJavaScriptを記述して下さい。<br>
+    <p style="color: red;">赤文字</p>
+    <div>
+      <ul id="parent">
+        <li id="list1">List1</li>
+        <li id="list2">List2</li>
+        <li id="list3">List3</li>
+      </ul>
+      <input type="button" id="btn"  value="button">
+    </div>
+  </body>
+</html>
+
+<!-- ここからJavaScriptを記述して下さい -->
+<script type="text/javascript">
+  var btn = document.getElementById('btn');
+  btn.addEventListener('click', function() {
+    var cng = document.getElementById('list1');
+    cng.style.color = "red";
+  });
+</script>

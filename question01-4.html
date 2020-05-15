@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>question01-4</title>
+  </head>
+  <body>
+    <h3>■要素.value：</h3>
+    buttonをクリックした時、テキストボックスの内容を変化させて下さい。<br><br>
+    <div>
+      <input id="text" type="text" value="">
+      <input type="button" id="btn"  value="button">
+    </div>
+  </body>
+</html>
+
+<!-- ここからJavaScriptを記述して下さい -->
+<script type="text/javascript">
+  var btn = document.getElementById('btn');
+  btn.addEventListener('click', function() {
+    var text = document.getElementById('text');
+    text.value = 'hoge';
+  });
+</script>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>question01-3</title>
+  </head>
+  <body>
+    <h3>■要素.name：</h3>
+    buttonをクリックした時、テキストボックスのname要素のみ取得してconsoleへ表示して下さい。<br><br>
+    <div>
+      <input type="text" id="textbox" name="foo" value="">
+      <input type="button" id="btn"  value="button">
+    </div>
+  </body>
+</html>
+
+<!-- ここからJavaScriptを記述して下さい -->
+<script type="text/javascript">
+  var btn = document.getElementById('btn');
+  btn.addEventListener('click', function() {
+    var textbox = document.getElementById('textbox');
+    console.log(textbox.name);
+  });
+</script>

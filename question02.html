@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>question02</title>
+  </head>
+  <body>
+    <h3>■Q 02:</h3>
+    以下に複数のdivタグで囲まれた文字列が存在します。<br>
+    buttonをクリックした時、class="a" が付いているものを全て取得し、<br>
+    consoleへ順番に表示するJavaScriptを記述して下さい。<br><br>
+    <div class="a">おはよう！</div>
+    <div class="a">こんにちは！</div>
+    <div class="a">こんばんは！</div>
+    <input type="button" id="btn"  value="button">
+  </body>
+</html>
+
+<!-- ここからJavaScriptを記述して下さい -->
+<script type="text/javascript">
+  var btn = document.getElementById('btn');
+  btn.addEventListener('click', function() {
+    var a = document.getElementsByClassName('a');
+    for (var i = 0; i < a.length; i++) {
+      console.log(a[i].textContent);
+    }
+  });
+</script>

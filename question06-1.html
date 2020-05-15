@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>question06-1</title>
+  </head>
+  <body>
+    <h3>■Q 06-1:</h3>
+    以下のチェックボックスの値を選択してbuttonを押した時、<br>
+    選択した値を配列でconsoleに表示するJavaScriptのメソッドを作成し実行して下さい。<br><br>
+    <div>
+      <label>check01<input type="checkbox" name="name" value="check01"></label>
+      <label>check02<input type="checkbox" name="name" value="check02"></label>
+      <label>check03<input type="checkbox" name="name" value="check03"></label>
+      <input type="button" id="btn"  value="button">
+    </div>
+  </body>
+</html>
+
+<!-- ここからJavaScriptを記述して下さい -->
+<script src="method.js"></script>
+<script type="text/javascript">
+  var btn = document.getElementById('btn');
+  btn.addEventListener('click', function() {
+    getCheckBoxValue('name');
+  });
+</script>
