@@ -1,2 +1,3 @@
 <?php
-echo ('こんにちは、'.$_GET['name'].'さん！');
+// Ajaxに応答して結果を返します
+echo ('Hello '.$_GET['name'].'!!');
